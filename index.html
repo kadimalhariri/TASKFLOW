@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Smart Task Management Application</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!--  NAVIGATION BAR  -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-tasks"></i>
+                <span>TaskFlow</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!--  HERO SECTION  -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Organize Your Tasks,<br>Boost Your <span class="highlight">Productivity</span></h1>
+            <p>TaskFlow helps you manage your daily tasks efficiently with a simple and intuitive interface.</p>
+            <div class="cta-buttons">
+                <a href="#tasks" class="btn btn-primary">Get Started</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-tasks fa-6x"></i>
+        </div>
+    </section>
+
+    <!--  FEATURES SECTION  -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose TaskFlow?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>Create and manage tasks instantly with our optimized interface.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt feature-icon"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access your tasks from any device, anywhere, anytime.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cloud-upload-alt feature-icon"></i>
+                    <h3>Auto Save</h3>
+                    <p>Your tasks are automatically saved to your browser.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your productivity with visual progress indicators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  TASK MANAGER SECTION  -->
+    <section id="tasks" class="task-manager">
+        <div class="container">
+            <h2 class="section-title">Manage Your Tasks</h2>
+            <div class="task-container">
+                <!-- Task Input Area -->
+                <div class="task-input-area">
+                    <input type="text" id="taskInput" placeholder="Enter a new task..." class="task-input">
+                    <input type="date" id="taskDate" class="task-date">
+                    <select id="taskPriority" class="task-priority">
+                        <option value="low">Low Priority</option>
+                        <option value="medium" selected>Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                    <button id="addTaskBtn" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="task-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+
+                <!-- Task Statistics -->
+                <div class="task-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Tasks:</span>
+                        <span id="totalTasks" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Completed:</span>
+                        <span id="completedTasks" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Pending:</span>
+                        <span id="pendingTasks" class="stat-value">0</span>
+                    </div>
+                </div>
+
+                <!-- Task List -->
+                <div id="taskList" class="task-list">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  CONTACT SECTION  -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> support@taskflow.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  FOOTER  -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3>TaskFlow</h3>
+                    <p>Making task management simple and efficient.</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#tasks">Tasks</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Links -->
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TaskFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
